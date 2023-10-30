@@ -1,1 +1,20 @@
-![schéma](https://github.com/NathalieMet/holbertonschool-system_engineering-devops/blob/main/Diagramme%20sans%20nom%20(1).jpg)
+
+Une "browser request" (requête de navigateur) fait référence à la demande d'un navigateur web (comme Google Chrome, Mozilla Firefox, Safari, etc.) à un serveur web pour récupérer des informations, des ressources ou des services.
+
+Un routeur est un périphérique réseau essentiel qui joue un rôle central dans la gestion et le routage du trafic de données entre différents réseaux informatiques. Le routeur agit comme un point de passage pour les données qui circulent entre les appareils connectés à un réseau local (LAN) et d'autres réseaux, y compris Internet.
+
+Un "DNS server" (serveur DNS, pour Domain Name System) est un composant central d'Internet qui joue un rôle essentiel dans la résolution des noms de domaine en adresses IP. Le DNS est un système hiérarchique permettant d'associer des noms de domaine conviviaux (comme www.foo.com) à des adresses IP numériques, qui sont nécessaires pour identifier les serveurs et les ordinateurs sur Internet. Les serveurs DNS sont responsables de cette traduction.
+
+Un enregistrement A (Address Record ou enregistrement d'adresse) est un type d'enregistrement dans le système de noms de domaine (DNS) qui est utilisé pour associer un nom de domaine à une adresse IP IPv4 spécifique. En d'autres termes, il permet de résoudre un nom de domaine (par exemple, www.exemple.com) en une adresse IP (par exemple, 192.0.2.1).
+
+Un "load balancer" (équilibreur de charge) est un dispositif ou un logiciel conçu pour répartir le trafic réseau entrant de manière équilibrée entre plusieurs serveurs ou ressources, afin d'optimiser les performances, d'assurer la disponibilité et de garantir la fiabilité des services en ligne. Les load balancers sont couramment utilisés dans les environnements réseau, en particulier pour les applications web et les services en ligne, afin de gérer de manière efficace la charge de trafic.
+
+Un serveur est un ordinateur ou un système informatique dédié à fournir des services, des ressources ou des fonctionnalités à d'autres ordinateurs, souvent appelés "clients", au sein d'un réseau informatique. Les serveurs sont des composants essentiels de l'infrastructure informatique et sont utilisés pour diverses tâches, notamment le stockage de données, l'hébergement de sites web, la gestion de bases de données, la messagerie électronique, la diffusion de fichiers, le partage de ressources et bien d'autres applications.
+
+Un serveur web (ou web server en anglais) est un logiciel ou un système informatique dédié à la gestion des requêtes HTTP (Hypertext Transfer Protocol) émises par des navigateurs web et à la fourniture de pages web, de fichiers et de contenus aux utilisateurs via Internet. Les serveurs web jouent un rôle central dans le fonctionnement d'Internet en permettant la diffusion de sites web, d'applications web et de ressources en ligne.
+
+Un serveur d'application (ou application server en anglais) est un logiciel ou un composant informatique qui fournit un environnement d'exécution pour le déploiement, la gestion et l'exécution d'applications logicielles, en particulier les applications web et les services en ligne. Les serveurs d'application sont conçus pour exécuter des applications métier complexes, gérer la logique applicative et fournir des services essentiels aux développeurs et aux utilisateurs finaux.
+
+Les application files sont des fichiers relatifs à l'environnement.
+
+Un serveur de base de données est un logiciel ou un système informatique dédié à la gestion, au stockage, à la récupération et à la manipulation de données dans une base de données. Les serveurs de base de données jouent un rôle central dans de nombreuses applications et systèmes informatiques, car ils permettent d'organiser, de stocker et de fournir un accès sécurisé aux données.
