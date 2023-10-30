@@ -1,3 +1,4 @@
+https://github.com/NathalieMet/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/web_reseau.jpg
 
 Une "browser request" (requête de navigateur) fait référence à la demande d'un navigateur web (comme Google Chrome, Mozilla Firefox, Safari, etc.) à un serveur web pour récupérer des informations, des ressources ou des services.
 
@@ -11,9 +12,9 @@ Un "load balancer" (équilibreur de charge) est un dispositif ou un logiciel con
 
 Un serveur est un ordinateur ou un système informatique dédié à fournir des services, des ressources ou des fonctionnalités à d'autres ordinateurs, souvent appelés "clients", au sein d'un réseau informatique. Les serveurs sont des composants essentiels de l'infrastructure informatique et sont utilisés pour diverses tâches, notamment le stockage de données, l'hébergement de sites web, la gestion de bases de données, la messagerie électronique, la diffusion de fichiers, le partage de ressources et bien d'autres applications.
 
-Un serveur web (ou web server en anglais) est un logiciel ou un système informatique dédié à la gestion des requêtes HTTP (Hypertext Transfer Protocol) émises par des navigateurs web et à la fourniture de pages web, de fichiers et de contenus aux utilisateurs via Internet. Les serveurs web jouent un rôle central dans le fonctionnement d'Internet en permettant la diffusion de sites web, d'applications web et de ressources en ligne.
+Un serveur web est un logiciel ou un système informatique dédié à la gestion des requêtes HTTP (Hypertext Transfer Protocol) émises par des navigateurs web et à la fourniture de pages web, de fichiers et de contenus aux utilisateurs via Internet. Les serveurs web jouent un rôle central dans le fonctionnement d'Internet en permettant la diffusion de sites web, d'applications web et de ressources en ligne.
 
-Un serveur d'application (ou application server en anglais) est un logiciel ou un composant informatique qui fournit un environnement d'exécution pour le déploiement, la gestion et l'exécution d'applications logicielles, en particulier les applications web et les services en ligne. Les serveurs d'application sont conçus pour exécuter des applications métier complexes, gérer la logique applicative et fournir des services essentiels aux développeurs et aux utilisateurs finaux.
+Un serveur d'application est un logiciel ou un composant informatique qui fournit un environnement d'exécution pour le déploiement, la gestion et l'exécution d'applications logicielles, en particulier les applications web et les services en ligne. Les serveurs d'application sont conçus pour exécuter des applications métier complexes, gérer la logique applicative et fournir des services essentiels aux développeurs et aux utilisateurs finaux.
 
 Les application files sont des fichiers relatifs à l'environnement.
 

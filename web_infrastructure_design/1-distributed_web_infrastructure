@@ -1,0 +1,127 @@
+https://github.com/NathalieMet/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/reseau_1.jpg
+
+A "browser request" refers to a request from a web browser (such as Google Chrome, Mozilla Firefox, Safari, etc.) to a web server to retrieve information, resources or services.
+
+A router is an essential network device that plays a central role in managing and routing data traffic between different computer networks. The router acts as a gateway for data flowing between devices connected to a local area network (LAN) and other networks, including the Internet.
+
+A DNS server (Domain Name System) is a central component of the Internet that plays an essential role in resolving domain names into IP addresses. DNS is a hierarchical system for associating user-friendly domain names (such as www.foo.com) with numerical IP addresses, which are needed to identify servers and computers on the Internet. DNS servers are responsible for this translation.
+
+An A record (Address Record) is a type of record in the Domain Name System (DNS) that is used to associate a domain name with a specific IPv4 address. In other words, it resolves a domain name (e.g. www.exemple.com) into an IP address (e.g. 192.0.2.1).
+
+A "load balancer" is a device or software designed to distribute incoming network traffic in a balanced manner between several servers or resources, in order to optimise performance, ensure availability and guarantee the reliability of online services. Load balancers are commonly used in network environments, particularly for web applications and online services, to manage traffic load efficiently.
+
+A server is a computer or computer system dedicated to providing services, resources or functionality to other computers, often called "clients", within a computer network. Servers are essential components of the IT infrastructure and are used for a variety of tasks, including data storage, website hosting, database management, email, file distribution, resource sharing and many other applications.
+
+A web server is software or a computer system dedicated to managing HTTP (Hypertext Transfer Protocol) requests from web browsers and delivering web pages, files and content to users via the Internet. Web servers play a central role in the operation of the Internet, enabling the distribution of websites, web applications and online resources.
+
+Un serveur d'application est un logiciel ou un composant informatique qui fournit un environnement d'exécution pour le déploiement, la gestion et l'exécution d'applications logicielles, en particulier les applications web et les services en ligne. Les serveurs d'application sont conçus pour exécuter des applications métier complexes, gérer la logique applicative et fournir des services essentiels aux développeurs et aux utilisateurs finaux.
+
+Les application files sont des fichiers relatifs à l'environnement.
+
+Un serveur de base de données est un logiciel ou un système informatique dédié à la gestion, au stockage, à la récupération et à la manipulation de données dans une base de données. Les serveurs de base de données jouent un rôle central dans de nombreuses applications et systèmes informatiques, car ils permettent d'organiser, de stocker et de fournir un accès sécurisé aux données.
+
+An application server is a software or computing component that provides an execution environment for the deployment, management and execution of software applications, particularly web applications and online services. Application servers are designed to run complex business applications, manage application logic and provide essential services to developers and end users.
+
+Application files are files relating to the environment.
+
+A database server is software or a computer system dedicated to the management, storage, retrieval and manipulation of data in a database. Database servers play a central role in many applications and IT systems, as they organise, store and provide secure access to data.
+
+Adding a second server improves the reliability, performance, redundancy and resilience of the network infrastructure, which is essential for many organisations, particularly those that rely heavily on IT for their business operations. It also enables users' needs to be better met while minimising data availability and security risks.
+
+The load balancer is configured with Round Robin: This is one of the simplest load balancing algorithms. In a round-robin setup, each new incoming connection or request is forwarded to the next server in the list, in a circular fashion. This evenly distributes the load among the servers. It's a good choice when all servers have similar capabilities and the goal is to evenly distribute traffic.
+
+The terms "Active-Active" and "Active-Passive" refer to two different high availability configurations in a load balancing setup, and they have distinct characteristics:
+
+Active-Active:
+
+In an Active-Active configuration, all load balancer nodes (or servers) actively distribute traffic at the same time.
+All nodes are actively serving client requests, sharing the load, and contributing to the processing of traffic.
+This setup provides redundancy and load distribution. If one node fails, the others continue to handle traffic, ensuring high availability and minimal disruption.
+It's a more efficient use of resources, as all nodes are utilized for processing traffic.
+Active-Passive:
+
+In an Active-Passive configuration, one load balancer node (or server) actively handles traffic, while the others remain in a standby or passive state.
+The active node serves all incoming requests, and the passive nodes are essentially on standby, not actively participating in traffic distribution.
+If the active node fails, one of the passive nodes is promoted to the active state to take over traffic handling. This typically involves some downtime or a brief interruption during the failover process.
+Active-Passive configurations are often used when redundancy and failover are more critical than maximizing resource utilization.
+Key Differences:
+
+Resource Utilization: In an Active-Active setup, all nodes are actively distributing traffic, leading to efficient resource utilization. In an Active-Passive setup, only one node is active at a time, which may not fully utilize the available resources.
+
+Redundancy: Active-Active provides redundancy and high availability without relying on a single active node. Active-Passive relies on one active node and promotes a standby node only when needed.
+
+Load Distribution: Active-Active balances the load across all nodes in real-time, while Active-Passive results in a more concentrated load on the active node until failover occurs.
+
+Complexity: Active-Active configurations can be more complex to set up, as they require synchronization and coordination between active nodes. Active-Passive setups are simpler but may result in less efficient resource utilization.
+
+The choice between Active-Active and Active-Passive depends on the specific needs of the application, the level of redundancy required, and the available resources. Active-Active configurations are often preferred when maximizing resource usage and minimizing downtime are essential, while Active-Passive setups are used when ensuring redundancy and rapid failover are top priorities.
+
+A Primary-Replica (Master-Slave) database cluster is a common architecture used to achieve high availability, scalability, and data redundancy in database systems. It works by having a primary (master) database server and one or more replica (slave) database servers. Here's how it works:
+
+1. Primary (Master) Database Server:
+
+The primary database server is the authoritative source for all database transactions and data changes.
+Application servers and clients send read and write requests to the primary server.
+The primary server processes write requests, updates data, and records all changes in its transaction log.
+2. Replica (Slave) Database Servers:
+
+Replica servers replicate data from the primary server to maintain a copy of the database.
+Replicas can be configured for read-only access or read-write access in some cases (for load balancing or failover).
+Replicas receive a copy of the transaction log from the primary server and apply the changes in near real-time.
+How Data Replication Works:
+
+Data Replication Trigger: Data replication is triggered by changes in the primary server's data. When a change occurs, it is recorded in the primary's transaction log.
+
+Replication Process: Replicas regularly connect to the primary server to request transaction log updates. The primary server sends the necessary transaction log entries to the replicas.
+
+Applying Changes: Replicas apply the received transaction log entries to their own database copies, ensuring that they stay in sync with the primary.
+
+Benefits:
+
+High Availability: If the primary server fails, one of the replica servers can be promoted to become the new primary, minimizing downtime. This is known as failover.
+
+Load Balancing: Read requests can be distributed across replica servers, reducing the read load on the primary server and improving performance.
+
+Data Redundancy: Data is redundantly stored on replica servers, which provides data protection in case of primary server failure.
+
+Scalability: Additional replicas can be added to handle increased read loads, which allows the system to scale horizontally.
+
+Considerations:
+
+Data Consistency: In a primary-replica setup, maintaining data consistency is critical. Replicas must apply changes in the same order as the primary to ensure data integrity.
+
+Latency: There may be a slight delay in data replication, resulting in some lag between the primary and replicas. This can affect applications that require real-time data.
+
+Failover Mechanism: It's essential to have an automated failover mechanism that can detect primary server failures and promote a replica to primary status.
+
+Read-Only Replicas: Read-only replicas can offload read traffic, but write traffic must still be directed to the primary server.
+
+Primary-Replica clusters are commonly used in database systems like MySQL, PostgreSQL, MongoDB, and others to ensure data availability, redundancy, and scalability in production environments.
+
+The primary node and the replica node in a database cluster have distinct roles and responsibilities in the context of an application. Understanding the differences between these nodes is crucial for designing robust and high-availability database systems. Here are the key differences in relation to the application:
+
+Primary Node:
+
+Read/Write Operations: The primary node is responsible for handling both read and write operations from the application. This means that all data modifications, such as INSERT, UPDATE, and DELETE queries, are processed by the primary node.
+
+Data Authority: The primary node is the authoritative source for all data changes. It has the most up-to-date and accurate data. Application data consistency and integrity are maintained by the primary node.
+
+Real-Time Updates: Any data changes made by the application are immediately processed by the primary node. This ensures that application data is always in sync with the primary node.
+
+Latency: The primary node typically experiences lower read latency, as it doesn't need to replicate data from other nodes. It's the ideal choice for applications that require low-latency access to the most current data.
+
+Failover: In the event of primary node failure, a failover process is triggered to promote one of the replica nodes to the role of the new primary node. This ensures application continuity.
+
+Replica Node:
+
+Read-Only Operations: Replica nodes are primarily used for read-only operations. They can serve read queries from the application but cannot process write (data-modifying) queries.
+
+Data Replication: Replicas maintain a copy of the data from the primary node by replicating changes made on the primary. This replication process may introduce a slight delay, leading to potential data lag compared to the primary node.
+
+Load Balancing: Replica nodes can distribute read traffic to balance the load and improve application performance. This is especially beneficial for applications with high read workloads.
+
+Scalability: Adding more replica nodes can increase the capacity to handle read requests, helping to scale the application horizontally. This can be particularly useful for applications with growing user bases.
+
+Data Redundancy: Replicas provide data redundancy. If the primary node fails, a replica can be promoted to serve as the new primary, ensuring data availability and continuity.
+
+In summary, the primary node is responsible for write operations, maintaining data authority, and ensuring data consistency, while replica nodes primarily handle read operations, distribute read traffic, and provide data redundancy and scalability. Application developers and administrators need to consider the roles and characteristics of these nodes to design an effective and robust database architecture that meets the specific requirements of the application.
